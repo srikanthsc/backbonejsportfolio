@@ -2,17 +2,130 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Simple Backbone.js portfolio</title>
+  <title>Srikanth's Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
 
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      background-color: #f34500;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+    }
+
+    .projectsList {
+      list-style: none;
+      padding: 0;
+    }
+
+    .project {
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .row {
+      margin-bottom: 10px;
+    }
+
+    .input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    #submit_button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+	.gif-container {
+    text-align: center;
+    margin-top: 20px; /* Adjust margin as needed */
+  }
+
+  .gif-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add a border radius for a rounded look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  #projects h1 {
+    font-family: Arial, sans-serif;
+  }
+  </style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <div class="container">
 	<header>
 		<h1>
-			<a href="/backbone/backbone006_routes/">
-				My beautiful portfolio
+			<a href="#home">
+				Srikanth's portfolio
 		</h1>
 
 		<nav role="navigation">
@@ -33,37 +146,43 @@
 	<h1>Home</h1>
 
 	<p>
-		Welcome on my beautiful portfolio based on the great <a href="https://backbonejs.org/" target="_blank">Backbone.js
+		Welcome on my portfolio based on the great <a href="https://backbonejs.org/" target="_blank">Backbone.js
 			</a> !
 	</p>
+	<img src="Full-Stack-3.gif" alt="Beautiful GIF">
 </script>
 
 <script type="text/template" id="about">
 	<h1>About</h1>
 
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad est debitis odio consequuntur magni doloribus dignissimos, mollitia deleniti quam, porro aut nesciunt explicabo ut ullam. Ad labore, eveniet impedit delectus.</p>
+	<p>I am Srikanth.C, I have recently graduated, I am a Tech enthusiast.
 
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum neque placeat aliquam, sint iste ad cupiditate suscipit expedita dolor error eos rerum necessitatibus sapiente soluta laboriosam, modi non molestiae et.</p>
+		I am always open to collaborating on projects and innovative/disruptive ideas.
+		
+		When I am not coding, you will find me lifting weights in the gym or at my desk sketching stuff.</p>
+
+		<img src="fullstack.gif" alt="Beautiful GIF">
 </script>
 
 <script type="text/template" id="projects">
 	<h1>Projects</h1>
-
+	
 	<ul class="projectsList">
-		<% _.each(projects, function(project) { %>
-			<li>
-				<article class="project">
-					<a href="<%= project.link %>" target="_blank">
-						<h1><%= project.title %></h1>
-						<figure>
-							<img src="<%= project.visual %>" alt="<%= project.visual %>" /></figure>
-						<span>See the project</span>
-					</a>
-				</article>
-			</li>
-		<% }); %>
+	  <% _.each(projects, function(project) { %>
+		<li>
+		  <article class="project">
+			<a href="<%= project.link %>" target="_blank">
+			  <h1><%= project.title %></h1>
+			  <figure>
+				<img src="<%= project.visual %>" alt="<%= project.title %> Image" />
+			  </figure>
+			  <span>See the project</span>
+			</a>
+		  </article>
+		</li>
+	  <% }); %>
 	</ul>
-</script>
+  </script>
 
 <script type="text/template" id="contact">
 	<h1>Contact</h1>
@@ -90,7 +209,7 @@
 <!-- partial -->
   <script src='jquery-min.js'></script>
 <script src='underscore-min.js'></script>
-<script src='backbone-min.js'></script><script  src="./script.js"></script>
+<script src='backbone-min.js'></script><script  src="script.js"></script>
 
 </body>
 </html>
