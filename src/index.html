@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Srikanth's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+	<header>
+		<h1>
+			<a href="/backbone/backbone006_routes/">
+				Srikanth's portfolio
+		</h1>
+
+		<nav role="navigation">
+			<ul class="mainMenu">
+				<li class="active"><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="mainContent"></main>
+
+</div>
+
+<script type="text/template" id="home">
+	<h1>Home</h1>
+
+	<p>
+		Welcome on my beautiful portfolio based on the great <a href="https://backbonejs.org/" target="_blank">Backbone.js
+			</a> !
+	</p>
+</script>
+
+<script type="text/template" id="about">
+	<h1>About</h1>
+
+	<p>I am Srikanth Collaty, I have recently graduated, I am a Tech enthusiast.
+
+		I am always open to collaborating on projects and innovative/disruptive ideas.
+		
+		When I am not coding, you will find me lifting weights in the gym or at my desk sketching stuff.</p>
+</script>
+
+<script type="text/template" id="projects">
+	<h1>Projects</h1>
+
+	<ul class="projectsList">
+		<% _.each(projects, function(project) { %>
+			<li>
+				<article class="project">
+					<a href="<%= project.link %>" target="_blank">
+						<h1><%= project.title %></h1>
+						<figure>
+							<img src="<%= project.visual %>" alt="<%= project.visual %>" /></figure>
+						<span>See the project</span>
+					</a>
+				</article>
+			</li>
+		<% }); %>
+	</ul>
+</script>
+
+<script type="text/template" id="contact">
+	<h1>Contact</h1>
+
+	<p>Please leave me a message :</p>
+
+	<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+		<div class="row">
+			<label for="name">Your name:</label><br />
+			<input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+		</div>
+		<div class="row">
+			<label for="email">Your email:</label><br />
+			<input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+		</div>
+		<div class="row">
+			<label for="message">Your message:</label><br />
+			<textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+		</div>
+		<input id="submit_button" type="submit" value="Send email" />
+	</form>
+</script>
+
+<!-- partial -->
+  <script src='jquery-min.js'></script>
+<script src='underscore-min.js'></script>
+<script src='backbone-min.js'></script><script  src="script.js"></script>
+
+</body>
+</html>

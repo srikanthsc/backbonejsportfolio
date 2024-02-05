@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lobster/v30/neILzCirqoswsqX9zoKmNg.ttf) format('truetype');
+}
+body {
+  color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #AAD2EF;
+}
+figure {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+p a {
+  text-decoration: underline;
+}
+.container {
+  max-width: 1024px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+header h1 {
+  font: 3rem 'Lobster', cursive;
+  text-align: center;
+}
+.mainMenu {
+  padding-left: 0;
+  text-align: center;
+}
+.mainMenu li {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.mainMenu li + li {
+  margin-left: 40px;
+}
+.mainMenu li.active a {
+  color: #3787C1;
+}
+.projectsList {
+  margin: 0;
+  padding: 0;
+}
+.projectsList li {
+  float: left;
+  width: 33.3%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
