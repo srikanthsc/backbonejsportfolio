@@ -14,12 +14,9 @@ var App = window.App || {};
 
 	// List of projects
     var Projects = new App.Projects([
-        { title : "Lorem ipsum", visual : "http://lorempicsum.com/futurama/200/200/1", link : "http://www.google.fr/"},
-        { title : "Dolor sit amet", visual : "http://lorempicsum.com/futurama/200/200/2", link : "http://www.google.fr/"},
-        { title : "Consectetur adipisicing", visual : "http://lorempicsum.com/futurama/200/200/3", link : "http://www.google.fr/"},
-        { title : "Cum neque", visual : "http://lorempicsum.com/futurama/200/200/4", link : "http://www.google.fr/"},
-        { title : "Modi non molestiae", visual : "http://lorempicsum.com/futurama/200/200/5", link : "http://www.google.fr/"},
-        { title : "Soluta laboriosam", visual : "http://lorempicsum.com/futurama/200/200/6", link : "http://www.google.fr/"}
+        { title : "Portfolio with Angular", visual : "Angular_full_color_logo.svg.png", link : "https://srikanthsc.github.io/srikanthsc.angularportfolio/"},
+        { title : "Portfolio with React.js", visual : "React-icon.svg.png", link : "https://srikanthsc.github.io/srikanthsc.reactportfolio/"},
+        { title : "Portfolio with Vue.js", visual : "vue.png", link : "https://srikanthsc.github.io/srikanthsc.vuejsportfolio2/"}
     ]);
 
 /*  ===============================
